@@ -1,0 +1,52 @@
+!SESSION 2013-04-06 15:01:26.434 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -console
+
+!ENTRY org.eclipse.osgi 4 0 2013-04-06 15:01:26.942
+!MESSAGE Bundle reference:file:bundles/******************************.jar@start not found.
+
+!ENTRY org.eclipse.osgi 4 0 2013-04-06 15:01:26.946
+!MESSAGE Bundle reference:file:bundles/******************************.jar@start not found.
+
+!ENTRY org.eclipse.equinox.http.registry 4 0 2013-04-06 15:01:27.144
+!MESSAGE 
+!STACK 0
+org.osgi.framework.BundleException: The bundle could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.registry; bundle-version="0.0.0"
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:305)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:355)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1074)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:616)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:508)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:299)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:489)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:211)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:321)
+
+!ENTRY org.eclipse.osgi 4 0 2013-04-06 15:01:27.165
+!MESSAGE Bundle initial@reference:file:bundles/org.eclipse.equinox.http.registry_1.0.100.v20080427-0830.jar/ was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2013-04-06 15:01:27.202
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: Unable to acquire application service. Ensure that the org.eclipse.core.runtime bundle is resolved and started (see config.ini).
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:74)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:150)
+
+!ENTRY org.eclipse.osgi 2 0 2013-04-06 15:01:27.210
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-04-06 15:01:27.210
+!MESSAGE Bundle initial@reference:file:bundles/org.eclipse.equinox.http.registry_1.0.100.v20080427-0830.jar/ was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.http.registry 2 0 2013-04-06 15:01:27.210
+!MESSAGE Missing required bundle org.eclipse.equinox.registry_0.0.0.
+
+!ENTRY org.eclipse.osgi 2 0 2013-04-06 15:01:27.216
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-04-06 15:01:27.216
+!MESSAGE Bundle initial@reference:file:bundles/org.eclipse.equinox.http.registry_1.0.100.v20080427-0830.jar/ [4] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.http.registry 2 0 2013-04-06 15:01:27.217
+!MESSAGE Missing required bundle org.eclipse.equinox.registry_0.0.0.

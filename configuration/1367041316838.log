@@ -1,0 +1,106 @@
+!SESSION 2013-04-27 13:41:56.510 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -console
+
+!ENTRY r-osgi://10.5.96.82:9278#32 4 0 2013-04-27 13:41:57.245
+!MESSAGE 
+!STACK 0
+org.osgi.framework.BundleException: Exception in proxy.baofojgoic_jchidc.middleware.middleware.inface.middlewareinfaceImpl.start() of bundle 17.
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:1028)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:984)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:346)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:355)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1074)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:616)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:508)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:299)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.launch(StartLevelManager.java:247)
+	at org.eclipse.osgi.framework.internal.core.SystemBundle.resume(SystemBundle.java:201)
+	at org.eclipse.osgi.framework.internal.core.Framework.launch(Framework.java:644)
+	at org.eclipse.osgi.framework.internal.core.OSGi.launch(OSGi.java:51)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:313)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:175)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:150)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.getService(BundleContextImpl.java:890)
+	at proxy.baofojgoic_jchidc.middleware.middleware.inface.middlewareinfaceImpl.start(Unknown Source)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:1009)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:1003)
+	... 14 more
+Root exception:
+java.lang.NullPointerException
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.getService(BundleContextImpl.java:890)
+	at proxy.baofojgoic_jchidc.middleware.middleware.inface.middlewareinfaceImpl.start(Unknown Source)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:1009)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:1003)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:984)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:346)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:355)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1074)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:616)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:508)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:299)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.launch(StartLevelManager.java:247)
+	at org.eclipse.osgi.framework.internal.core.SystemBundle.resume(SystemBundle.java:201)
+	at org.eclipse.osgi.framework.internal.core.Framework.launch(Framework.java:644)
+	at org.eclipse.osgi.framework.internal.core.OSGi.launch(OSGi.java:51)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:313)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:175)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:150)
+
+!ENTRY mars.atmmiddleware 4 0 2013-04-27 13:41:59.651
+!MESSAGE 
+!STACK 0
+org.osgi.framework.BundleException: Exception in mars.atmmiddleware.Activator.start() of bundle mars.atmmiddleware.
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:1028)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:984)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:346)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:355)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1074)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:616)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:508)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:299)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:489)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:211)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:321)
+Caused by: ch.ethz.iks.r_osgi.RemoteOSGiException: Cannot connect to r-osgi://10.5.96.82:9278
+	at ch.ethz.iks.r_osgi.impl.RemoteOSGiServiceImpl.getRemoteServiceReferences(RemoteOSGiServiceImpl.java:738)
+	at mars.atmmiddleware.Activator.start(Activator.java:69)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:1009)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:1003)
+	... 10 more
+Root exception:
+ch.ethz.iks.r_osgi.RemoteOSGiException: Cannot connect to r-osgi://10.5.96.82:9278
+	at ch.ethz.iks.r_osgi.impl.RemoteOSGiServiceImpl.getRemoteServiceReferences(RemoteOSGiServiceImpl.java:738)
+	at mars.atmmiddleware.Activator.start(Activator.java:69)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:1009)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:1003)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:984)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:346)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:355)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1074)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:616)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:508)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:299)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:489)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:211)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:321)
+
+!ENTRY org.eclipse.osgi 4 0 2013-04-27 13:41:59.651
+!MESSAGE Bundle initial@reference:file:bundles/mars.atmmiddleware_1.0.0.jar/ [14] is not active.
+
+!ENTRY org.eclipse.osgi 4 0 2013-04-27 13:41:59.651
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: Unable to acquire application service. Ensure that the org.eclipse.core.runtime bundle is resolved and started (see config.ini).
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:74)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:150)
